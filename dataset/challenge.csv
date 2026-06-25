@@ -1,0 +1,21 @@
+id,input
+C01,' OR 'a'='a
+C02,admin' #
+C03,' OR 1=1 LIMIT 1-- -
+C04,"' UNION SELECT password, role FROM users-- -"
+C05,"1' UNION SELECT secret, NULL FROM users WHERE username='admin'-- "
+C06,Gadget' OR '1'='1
+C07,"' AND 1=CONVERT(int,(SELECT @@version))-- "
+C08,"' AND extractvalue(1,concat(0x7e,version()))-- "
+C09,%27%20OR%20%27a%27%3D%27a
+C10,'; DROP TABLE users--
+C11,Gadget Model 530
+C12,O'Connor
+C13,Sara.Reyes
+C14,stainless steel
+C15,noah.kim@example.com
+C16,it's a great deal
+C17,Stationery
+C18,Murphy & Sons
+C19,D'Souza
+C20,Widget Model 142
