@@ -1,0 +1,27 @@
+payload,label,technique,encoding
+alice,benign,,plain
+widget,benign,,plain
+Tools,benign,,plain
+O'Brien,benign,,plain
+"5'9"" shelf",benign,,plain
+d'Angelo,benign,,plain
+hello world,benign,,plain
+Model 204,benign,,plain
+' OR '1'='1,malicious,auth-bypass,plain
+%27%20OR%20%271%27%3D%271,malicious,auth-bypass,url
+admin'--,malicious,auth-bypass,plain
+admin%27--,malicious,auth-bypass,url
+' OR 1=1--,malicious,auth-bypass,plain
+%27%20OR%201%3D1--,malicious,auth-bypass,url
+') OR ('1'='1,malicious,auth-bypass,plain
+%27%29%20OR%20%28%271%27%3D%271,malicious,auth-bypass,url
+"' UNION SELECT username,password FROM users--",malicious,union,plain
+%27%20UNION%20SELECT%20username%2Cpassword%20FROM%20users--,malicious,union,url
+"' UNION SELECT id,secret FROM users WHERE role='admin'--",malicious,union,plain
+%27%20UNION%20SELECT%20id%2Csecret%20FROM%20users%20WHERE%20role%3D%27admin%27--,malicious,union,url
+"x' UNION SELECT NULL,name FROM products--",malicious,union,plain
+x%27%20UNION%20SELECT%20NULL%2Cname%20FROM%20products--,malicious,union,url
+widget' AND '1'='1,malicious,boolean,plain
+widget' AND '1'='2,malicious,boolean,plain
+',malicious,error,plain
+""" OR """"=""",malicious,error,plain
